@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "COVID19 India Tracker",
+    "description": "This extension will stay updating covid 19 cases in india.",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+      ],
+    "content_scripts" : [
+        {
+            "matches": ["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "COVID 19 India Cases"
+    },
+    "icons": {
+         "16": "icon16.png",
+        "48": "icon48.png",
+       "128": "icon128.png" 
+    }
+    
+}

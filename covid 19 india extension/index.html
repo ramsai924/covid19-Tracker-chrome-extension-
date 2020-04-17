@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap" rel="stylesheet">
+    <script src="content.js"></script>
+<style>
+    #customers {
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: auto;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1CAC94;
+    color: white;
+    }
+</style>
+</head>
+<body>
+  <div>
+    <p id="empty"></p>
+  </div>
+<div>
+  <h2 style="text-align: center;font-family: 'Baloo Paaji 2', cursive;">COVID19-India</h2>
+</div>
+<div>
+  <label>Last Updated : <span id="time"></span></label>
+</div><br>
+<table id="customers">
+  <tr>
+    <th>STATE</th>
+    <th>CONFIRMED</th>
+    <th>ACTIVE</th>
+    <th>RECOVERD</th>
+    <th>DEATHS</th>
+  </tr>
+  
+</table>
+
+
+
+</body>
+</html>
+
