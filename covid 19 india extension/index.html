@@ -28,18 +28,53 @@
     background-color: #1CAC94;
     color: white;
     }
+
+    #totalData{
+      font-family: 'Baloo Paaji 2', cursive;
+      width: 100%;
+      text-align: center;
+     
+    }
+    #totalData td , #totalData th{
+      margin: 10px;
+      padding: 5px;
+    }
+    #totalData th{
+      font-size: 15px;
+    }
+    #totalData td{
+      font-size: 24px;
+      font-weight: bold;
+    }
 </style>
 </head>
 <body>
-  <div>
-    <p id="empty"></p>
-  </div>
-<div>
+
+<div class="header">
   <h2 style="text-align: center;font-family: 'Baloo Paaji 2', cursive;">COVID19-India</h2>
 </div>
-<div>
-  <label>Last Updated : <span id="time"></span></label>
+
+<div class="total">
+  <table id="totalData">
+    <tr>
+      <th>CNF</th>
+      <th>ACT</th>
+      <th>REC</th>
+      <th>DET</th>
+    </tr>
+    <tr>
+      <td id="one">140000</td>
+      <td id="two">1231</td>
+      <td id="three">3132</td>
+      <td id="four">232</td>
+    </tr>
+  </table>
 </div><br>
+
+<div class="time">
+  <label style="font-family: 'Baloo Paaji 2', cursive;">Last Updated : <span id="time"></span></label>
+</div><br>
+
 <table id="customers">
   <tr>
     <th>STATE</th>
@@ -50,8 +85,6 @@
   </tr>
   
 </table>
-
-
 
 </body>
 </html>
