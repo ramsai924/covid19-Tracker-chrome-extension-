@@ -7,19 +7,19 @@ var checktd = document.getElementsByTagName("td");
     })
     .then(function(res){
         console.log(res);
-
+ 
 
         var time = document.getElementById("time");
         time.innerHTML = res.statewise[0].lastupdatedtime;
 
-        document.getElementById("one").innerHTML = res.statewise[0].confirmed;
-        document.getElementById("two").innerHTML = res.statewise[0].active;
+        document.getElementById("one").innerHTML = res.statewise[0].confirmed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        document.getElementById("two").innerHTML = res.statewise[0].active.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
         var rec = document.getElementById("three");
         rec.style.color = "#1BAB57"
-        rec.innerHTML = res.statewise[0].recovered;
+        rec.innerHTML = res.statewise[0].recovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
         var det = document.getElementById("four");
         det.style.color = "red";
-        det.innerHTML = res.statewise[0].deaths;
+        det.innerHTML = res.statewise[0].deaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 
       
 
@@ -34,20 +34,20 @@ var checktd = document.getElementsByTagName("td");
             tr.appendChild(td);
 
             var td2 = document.createElement("td");
-            td2.textContent = res.statewise[i].confirmed;
+         td2.textContent = res.statewise[i].confirmed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
             tr.appendChild(td2);
 
             var td3 = document.createElement("td");
-            td3.textContent = res.statewise[i].active;
+         td3.textContent = res.statewise[i].active.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
             tr.appendChild(td3);
 
             var td4 = document.createElement("td");
-            td4.textContent = res.statewise[i].recovered;
+         td4.textContent = res.statewise[i].recovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
             td4.style.color = "#1BAB57"
             tr.appendChild(td4);
 
             var td5 = document.createElement("td");
-            td5.textContent = res.statewise[i].deaths;
+         td5.textContent = res.statewise[i].deaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
             td5.style.color = "red";
             tr.appendChild(td5);
 

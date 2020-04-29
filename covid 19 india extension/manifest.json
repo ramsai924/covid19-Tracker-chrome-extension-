@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "COVID19 India Tracker",
     "description": "This extension will stay updating covid 19 cases in india.",
-    "version": "1.1",
+    "version": "1.2",
     "permissions": [
         "activeTab"
       ],
