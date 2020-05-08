@@ -5,9 +5,9 @@
 - Download this extension so that Latest version of extension will be updated automatically
 [Click here to Download](https://chrome.google.com/webstore/detail/ddmglodgdhmljfkjegjoaphjfkbcohic/publish-accepted?authuser=0&hl=en)
 # Extension Layout
-- Version 1.3
+## Version 1.3
 ![Image description](screenshot2.png)
-- Version 1.4
+## Version 1.4
 ![Image description](screenshot3.png)
 # Libraries used
 - ChartsJs for graphs
