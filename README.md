@@ -11,8 +11,8 @@
 ![Image description](screenshot3.png)
 # Libraries used
 - ChartsJs for graphs
-[Click here to redirect Chartjs](https://www.chartjs.org/)
+[Link for Chartjs](https://www.chartjs.org/)
 # API 
 - Covid 19 india API 
-[Get the API](https://documenter.getpostman.com/view/10724784/SzYXXKmA?version=latest)
+[Get API](https://documenter.getpostman.com/view/10724784/SzYXXKmA?version=latest)
 
