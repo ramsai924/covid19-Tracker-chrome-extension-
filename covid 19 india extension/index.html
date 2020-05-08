@@ -2,6 +2,7 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap" rel="stylesheet">
+    <script src="chart.js"></script>
     <script src="content.js"></script>
 <style>
     #customers {
@@ -46,13 +47,23 @@
       font-size: 24px;
       font-weight: bold;
     }
+    .total th, td{
+      border: 0.2px solid #d9d4d4;
+    }
+    #charts{
+      overflow-x: auto;
+    }
 </style>
 </head>
 <body>
+  <div class="header">
+    <h2 style="text-align: center;font-family: 'Baloo Paaji 2', cursive;">COVID19-India</h2>
+  </div>
+  
+  <div id="charts" class="chart-container" style="position: relative; width:100%">
+    <canvas id="myChart" height="340"></canvas>
+  </div><br>
 
-<div class="header">
-  <h2 style="text-align: center;font-family: 'Baloo Paaji 2', cursive;">COVID19-India</h2>
-</div>
 
 <div class="total">
   <table id="totalData">
@@ -63,19 +74,19 @@
       <th>DET</th>
     </tr>
     <tr>
-      <td id="one">140000</td>
-      <td id="two">1231</td>
-      <td id="three">3132</td>
-      <td id="four">232</td>
+      <td id="one">NO Data</td>
+      <td id="two">NO Data</td>
+      <td id="three">NO Data</td>
+      <td id="four">NO Data</td>
     </tr>
   </table>
 </div><br>
 
-<div class="time">
+<div class="time" style="transform: translateY(-12px);">
   <label style="font-family: 'Baloo Paaji 2', cursive;">Last Updated : <span id="time"></span></label>
 </div><br>
 
-<table id="customers">
+<table id="customers" style="transform: translateY(-14px);">
   <tr>
     <th>STATE</th>
     <th>CONFIRMED</th>

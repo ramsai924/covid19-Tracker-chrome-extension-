@@ -7,8 +7,73 @@ var checktd = document.getElementsByTagName("td");
     })
     .then(function(res){
         console.log(res);
- 
 
+        //TotalCnf
+        var TotalDeaths = [];
+        for(let i=0;i<res.cases_time_series.length;i++){
+           TotalDeaths.push(res.cases_time_series[i].totalconfirmed);
+        }
+        //Dates
+        var Dates = [];
+        for (let i = 0; i < res.cases_time_series.length; i++) {
+          Dates.push(res.cases_time_series[i].date.substring(0, 6));
+        }
+        //Recover
+        var Recover = [];
+        for (let i = 0; i < res.cases_time_series.length; i++) {
+          Recover.push(res.cases_time_series[i].totalrecovered);
+        }
+        //Deaths
+        var Deaths = [];
+        for (let i = 0; i < res.cases_time_series.length; i++) {
+          Deaths.push(res.cases_time_series[i].totaldeceased);
+        }
+      console.log(Deaths);
+
+         var ctx = document.getElementById("myChart").getContext("2d");
+         var myChart = new Chart(ctx, {
+           type: "line",
+           data: {
+             labels: Dates,
+             datasets: [
+               {
+                 label: "Present confirm",
+                 data: TotalDeaths,
+                 backgroundColor: ["rgba(20, 131, 250, 0.35)"],
+                 borderColor: ["#1483fa"],
+                 borderWidth: 1,
+               },
+               {
+                 label: "Recover",
+                 data: Recover,
+                 backgroundColor: ["rgba(159, 231, 126, 0.35)"],
+                 borderColor: ["green"],
+                 borderWidth: 1,
+               },
+               {
+                 label: "Deaths",
+                 data: Deaths,
+                 backgroundColor: ["rgba(202, 99, 99, 0.35)"],
+                 borderColor: ["red"],
+                 borderWidth: 1,
+               },
+             ],
+           },
+           options: {
+             scales: {
+               yAxes: [
+                 {
+                   ticks: {
+                     beginAtZero: true,
+                   },
+                 },
+               ],
+             },
+           },
+         });
+         
+ 
+// Table data start
         var time = document.getElementById("time");
         time.innerHTML = res.statewise[0].lastupdatedtime;
 
@@ -59,18 +124,3 @@ var checktd = document.getElementsByTagName("td");
     });
 
    
-// fetch("https://api.covid19india.org/state_district_wise.json")
-//     .then(function(res){
-//         return res.json();
-//     }).then(function(res){
-//         var result = Object.entries(res);
-//         for(let i=0;i<result.length;i++){
-//             for(let j=0;j<result.length;j++){
-//                 console.log(result[i][j]);
-//             }
-//         }
-//         console.log(result);
-//     })
-
-//     // var ram = document.getElementById("customers")
-//     // console.log(ram);
