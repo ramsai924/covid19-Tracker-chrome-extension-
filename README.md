@@ -2,6 +2,7 @@
 - This extension will update covid19 infected cases in india.
 - This extension will be avaliable in chrome web store and i will be keep updating this extension.
 # Extension Download Link : 
+- Download this extension so that Latest version of extension will be updated automatically
 [Click here to Download](https://chrome.google.com/webstore/detail/ddmglodgdhmljfkjegjoaphjfkbcohic/publish-accepted?authuser=0&hl=en)
 # Extension Layout
 - Version 1.3
